@@ -6,6 +6,7 @@ html {
   font-weight: 500;
   line-height: 1.8em;
   color: #666;
+  font-family: "Roboto", sans-serif;
 }
 
 .image1,
@@ -23,16 +24,35 @@ html {
 }
 
 .image1 {
-  background-image: url(../img/city1.jpg);
+  background-image: url(../img/sg1.jpg);
   min-height: 100%;
+  background-size: cover;
 }
 .image2 {
-  background-image: url(../img/city2.jpg);
+  background-image: url(../img/sg2.jpg);
   min-height: 100%;
+  background-size: cover;
 }
 .image3 {
-  background-image: url(../img/city3.jpg);
+  background-image: url(../img/hn1.png);
   min-height: 100%;
+  background-size: cover;
+}
+.image4 {
+  background-image: url(../img/hn2.jpg);
+  min-height: 100%;
+  background-size: cover;
+}
+
+.image5 {
+  background-image: url(../img/dn1.jpg);
+  min-height: 100%;
+  background-size: cover;
+}
+.image6 {
+  background-image: url(../img/dn3.jpg);
+  min-height: 100%;
+  background-size: cover;
 }
 section {
   text-align: center;
@@ -67,4 +87,25 @@ section {
 
 .trans {
   background-color: transparent;
+}
+
+/* Mobile (Iphone) */
+@media only screen and (max-width: 46.1875rem) {
+  section {
+    padding: 1rem;
+  }
+  section p {
+    text-align: justify;
+  }
+  section p span {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .image2 {
+    background-size: 200% 100%;
+  }
+
+  .image3 {
+    background-size: 200% 100%;
+  }
 }

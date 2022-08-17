@@ -3,6 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --color-red: #ec1840;
+  --color-purple: #7a18ec;
+  --color-white: #fff;
+  --color-black-1: #111;
+  --color-black-2: #222;
+  --color-black-3: #444;
+  --speed-normal: 0.5s;
+  --speed-fast: 0.8s;
+}
 section {
   height: 100vh;
   background: #000;
@@ -85,16 +95,39 @@ h1 span:nth-child(8) {
   animation-delay: 3.5s;
 }
 .link-parallax {
+  display: flex;
   position: relative;
   z-index: 100;
   margin-top: 3rem;
 }
 .link-parallax a {
+  position: relative;
   padding: 20px;
+  margin-left: 2rem;
+  letter-spacing: 2px;
   text-decoration: none;
-  color: #ddd;
-  background-color: crimson;
+  text-transform: uppercase;
   text-align: center;
+  color: var(--color-white);
+  transition: var(--speed-normal);
+  border: 1px solid var(--color-red);
+  border-radius: 20px;
+}
+.link-parallax a:hover {
+  border: 1px solid transparent;
+  background: var(--color-red) url(https://i.postimg.cc/wBXGXbWN/pixel.png);
+  transition-delay: 0.8s;
+  background-size: 180px;
+  animation: fill var(--speed-fast) steps(8) forwards;
+}
+
+@keyframes fill {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -480px;
+  }
 }
 /* Mobile (Iphone) */
 @media only screen and (max-width: 46.1875rem) {
@@ -132,5 +165,14 @@ h1 span:nth-child(8) {
   }
   section::before {
     margin-top: 4rem;
+  }
+
+  .link-parallax {
+    margin-top: 2rem;
+  }
+  .link-parallax a {
+    font-size: 13px;
+    padding: 15px;
+    text-transform: capitalize;
   }
 }
