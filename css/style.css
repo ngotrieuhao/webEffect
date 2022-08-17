@@ -81,7 +81,9 @@ section {
   letter-spacing: 0.5rem;
   text-transform: uppercase;
 }
-
+section p {
+  font-weight: 300;
+}
 .span-area {
   background-color: #111;
   color: #fff;
