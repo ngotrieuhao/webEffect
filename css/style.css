@@ -6,7 +6,7 @@ html {
   font-weight: 500;
   line-height: 1.8em;
   color: #666;
-  font-family: sans-serif;
+  font-family: "Roboto";
 }
 
 .image1,
@@ -22,7 +22,10 @@ html {
 
   background-attachment: fixed;
 }
-
+section p span {
+  font-weight: bold;
+  font-size: 30px;
+}
 .image1 {
   background-image: url(../img/sg1.jpg);
   min-height: 100%;
@@ -97,10 +100,7 @@ section {
   section p {
     text-align: justify;
   }
-  section p span {
-    font-weight: bold;
-    font-size: 30px;
-  }
+
   .image2 {
     background-size: 200% 100%;
   }
