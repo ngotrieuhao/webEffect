@@ -98,7 +98,7 @@ h1 span:nth-child(8) {
   display: flex;
   position: relative;
   z-index: 100;
-  margin-top: 3rem;
+  padding-top: 3rem;
 }
 .link-parallax a {
   position: relative;
@@ -174,5 +174,22 @@ h1 span:nth-child(8) {
     font-size: 13px;
     padding: 15px;
     text-transform: capitalize;
+  }
+}
+
+/* TABLET (Ipad Air) */
+@media only screen and (min-width: 46.25rem) and (max-width: 63.9375rem) {
+  .link-parallax a {
+    font-size: 20px;
+    padding: 30px;
+  }
+  h1 span:nth-child(6) {
+    animation-delay: 3s;
+  }
+  h1 span:nth-child(7) {
+    animation-delay: 3.5s;
+  }
+  h1 span:nth-child(8) {
+    animation-delay: 4s;
   }
 }
