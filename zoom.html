@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Effect</title>
+    <script
+      src="https://kit.fontawesome.com/27d79cf26d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="back">
+      <a href="./index.html"><i class="fa-solid fa-arrow-left-long"></i>Back</a>
+    </div>
+    <section class="zoom">
+      <img src="./img/mountain1.png" alt="" id="layer1" />
+      <img src="./img/mountain2.png" alt="" id="layer2" />
+      <img src="./img/text.png" alt="" id="text1" />
+    </section>
+    <section class="content">
+      <h2>Everest</h2>
+      <p>
+        Núi Everest (còn được gọi là Núi Qomolangma ở Tây Tạng), ngọn núi cao
+        nhất thế giới với chiều cao 8.848 mét (29.029 ft), nằm ở khu vực
+        Mahalangur của dãy Himalaya biên giới giữa Nepal và Trung Quốc. Với địa
+        hình tráng lệ dốc đứng, đỉnh Everest được bao phủ tuyết quanh năm và có
+        hình dạng giống với hình dạng của một kim tự tháp. Tên tiếng Tây Tạng
+        của nó Qomolangma có nghĩa là Nữ thần thứ ba khiến cho cho nơi đây trở
+        nên bí ẩn hơn. Núi Everest được mệnh danh là nóc nhà của thế giới và vẻ
+        đẹp tráng lệ. Trong phạm vi 20km quanh Everest, có hơn 40 ngọn núi với
+        chiều cao hơn 7.000 mét. Những ngọn núi kì vĩ này đôi khi ẩn mình trong
+        mây và sương mù gây tò mò cho khách du lịch.
+      </p>
+    </section>
+
+    <script type="text/javascript">
+      var layer1 = document.getElementById("layer1");
+      scroll = window.pageYOffset;
+      document.addEventListener("scroll", function (e) {
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer1.style.width = 100 + scroll / 5 + "%";
+      });
+      var layer2 = document.getElementById("layer2");
+      scroll = window.pageYOffset;
+      document.addEventListener("scroll", function (e) {
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer2.style.width = 100 + scroll / 5 + "%";
+        layer2.style.left = scroll / 50 + "%";
+      });
+
+      var text = document.getElementById("text1");
+      scroll = window.pageYOffset;
+      document.addEventListener("scroll", function (e) {
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer2.style.width = 100 + scroll / 5 + "%";
+        text.style.top = -scroll / 20 + "%";
+      });
+    </script>
+  </body>
+</html>

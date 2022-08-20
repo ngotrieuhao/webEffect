@@ -13,6 +13,29 @@
   --speed-normal: 0.5s;
   --speed-fast: 0.8s;
 }
+.back {
+  position: fixed;
+  z-index: 9999;
+  margin: 2rem;
+}
+.back a {
+  padding: 13px 35px;
+  text-decoration: none;
+  background: crimson;
+  color: #fff;
+  border-radius: 20px;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 0 8px 0px crimson;
+}
+.back a:hover {
+  opacity: 0.7;
+}
+.back a i {
+  position: relative;
+  top: 1px;
+  right: 10px;
+  font-size: 14px;
+}
 section {
   height: 100vh;
   background: #000;
@@ -96,11 +119,15 @@ h1 span:nth-child(8) {
 }
 .link-parallax {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   z-index: 100;
   padding-top: 3rem;
 }
 .link-parallax a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   padding: 20px;
   margin-left: 2rem;
@@ -113,6 +140,7 @@ h1 span:nth-child(8) {
   border: 1px solid var(--color-red);
   border-radius: 20px;
 }
+
 .link-parallax a:hover {
   border: 1px solid transparent;
   background: var(--color-red) url(https://i.postimg.cc/wBXGXbWN/pixel.png);
@@ -163,14 +191,12 @@ h1 span:nth-child(8) {
   h1 span:nth-child(8) {
     animation-delay: 3.5s;
   }
-  section::before {
-    margin-top: 4rem;
-  }
-
   .link-parallax {
-    margin-top: 2rem;
+    row-gap: 1rem;
   }
   .link-parallax a {
+    min-width: 120px;
+    min-height: 50px;
     font-size: 13px;
     padding: 15px;
     text-transform: capitalize;
