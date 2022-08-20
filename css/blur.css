@@ -69,3 +69,18 @@ section .box p {
   font-size: 18px;
   z-index: 2;
 }
+/* Mobile (Iphone) */
+@media only screen and (max-width: 46.1875rem) {
+  section {
+    background-size: 200% 100%;
+    background-position: center;
+  }
+  section .box {
+    max-width: 280px;
+    padding: 30px;
+  }
+  section .box p {
+    font-size: 20px;
+    text-align: justify;
+  }
+}
