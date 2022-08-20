@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: "Roboto", sans-serif;
+}
 :root {
   --color-red: #ec1840;
   --color-purple: #7a18ec;
