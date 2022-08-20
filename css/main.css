@@ -183,13 +183,13 @@ h1 span:nth-child(8) {
   }
 
   h1 span:nth-child(6) {
-    animation-delay: 2.5s;
-  }
-  h1 span:nth-child(7) {
     animation-delay: 3s;
   }
-  h1 span:nth-child(8) {
+  h1 span:nth-child(7) {
     animation-delay: 3.5s;
+  }
+  h1 span:nth-child(8) {
+    animation-delay: 4s;
   }
   .link-parallax {
     row-gap: 1rem;

@@ -6,7 +6,7 @@ html {
   font-weight: 500;
   line-height: 1.8em;
   color: #666;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 .back {
   position: fixed;
@@ -109,6 +109,7 @@ section {
 }
 section p {
   font-weight: 300;
+  line-height: 40px;
 }
 .span-area {
   background-color: #111;
