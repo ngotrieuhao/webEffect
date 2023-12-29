@@ -121,6 +121,7 @@ h1 span:nth-child(8) {
   animation-delay: 3.5s;
 }
 .link-parallax {
+  row-gap: 20px;
   display: flex;
   flex-wrap: wrap;
   position: relative;

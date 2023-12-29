@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #96ee1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.back {
+  margin: 2rem;
+}
+.back a {
+  padding: 13px 35px;
+  text-decoration: none;
+  background: crimson;
+  color: #fff;
+  border-radius: 20px;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 0 8px 0px crimson;
+}
+.back a:hover {
+  opacity: 0.7;
+}
+.back a i {
+  position: relative;
+  top: 1px;
+  right: 10px;
+  font-size: 14px;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: black;
+  overflow: hidden;
+}
+.wrapp_container {
+  /* width: 100vw; */
+  /* height: 100vh; */
+  width: 580px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapp_container p {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 70px;
+  text-shadow: 0 0 100px var(--primary-color);
+  animation: typing 5s steps(12) infinite, blink 1s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: 5px;
+}
+
+@keyframes typing {
+  0%,
+  100% {
+    width: 0;
+  }
+  80% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-right: 5px solid var(--primary-color);
+  }
+  50% {
+    border-right: 5px solid transparent;
+  }
+}
