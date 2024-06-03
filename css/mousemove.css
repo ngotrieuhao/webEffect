@@ -1,0 +1,94 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: consolas;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+.back {
+  position: fixed;
+  z-index: 9999;
+  margin: 2rem;
+}
+.back a {
+  padding: 13px 35px;
+  text-decoration: none;
+  background: crimson;
+  color: #fff;
+  border-radius: 20px;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 0 8px 0px crimson;
+}
+.back a:hover {
+  opacity: 0.7;
+}
+.back a i {
+  position: relative;
+  top: 1px;
+  right: 10px;
+  font-size: 14px;
+}
+
+body {
+  background: #333;
+  user-select: none;
+}
+
+.banner {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #09da37;
+  z-index: 1;
+  clip-path: circle(15vw at var(--x) var(--y));
+}
+.banner h2 {
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 4px #333;
+  font-size: 25vw;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content h2 {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+  -webkit-text-stroke: 4px #09da37;
+  font-size: 25vw;
+  font-weight: bold;
+}

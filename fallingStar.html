@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Falling Star</title>
     <link rel="stylesheet" href="css/fallingstar.css" />
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="back">
-        <a href="./index.html"><i class="fa-solid fa-arrow-left-long"></i>Back</a>
-      </div>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <a href="./index.html"><i class="fa-solid fa-arrow-left-long"></i>Back</a>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script>
-        function stars() {
-            let e = document.createElement('div');
-            e.setAttribute('class', 'star');
-            document.body.appendChild(e);
-            e.style.left = Math.random() * + innerWidth + 'px';
+      function stars() {
+        let e = document.createElement("div");
+        e.setAttribute("class", "star");
+        document.body.appendChild(e);
+        e.style.left = Math.random() * +innerWidth + "px";
 
-            let size = Math.random() * 12;
-            let duration = Math.random() * 3;
+        let size = Math.random() * 12;
+        let duration = Math.random() * 3;
 
-            e.style.fontSize = 12 + size +'px';
-            e.style.animationDuration = 2 + duration +'s';
+        e.style.fontSize = 12 + size + "px";
+        e.style.animationDuration = 2 + duration + "s";
 
-            setTimeout(() => {
-                document.body.removeChild(e);
-            }, 5000);
-        }
+        setTimeout(() => {
+          document.body.removeChild(e);
+        }, 5000);
+      }
 
-        setInterval(function(){ 
-            stars();
-        }, 100);
-
+      setInterval(function () {
+        stars();
+      }, 100);
     </script>
-</body>
+  </body>
 </html>

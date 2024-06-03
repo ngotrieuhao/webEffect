@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Image</title>
+    <link rel="stylesheet" href="css/scrollImage.css">
+</head>
+<body>
+    <div class="back">
+        <a href="./index.html"><i class="fa-solid fa-arrow-left-long"></i>Back</a>
+      </div>
+      
+    <div class="box">
+    </div>
+
+    <script>
+        let box = document.querySelector('.box');
+        let images = ["../img/bg1.jpg","../img/bg3.png","../img/bg4.jpg","../img/city1.jpg","../img/city2.jpg","../img/dn3.jpg"];
+
+        window.addEventListener('scroll', () => {
+            let scrollPosition = window.scrollY;
+            let viewportHeight = window.innerHeight;
+            
+            let imageIndex = Math.floor(scrollPosition / viewportHeight % images.length);
+            box.style.backgroundImage = `url(${images[imageIndex]})`;
+        })
+    </script>
+</body>
+</html>

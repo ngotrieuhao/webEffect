@@ -1,0 +1,129 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+.back {
+  position: fixed;
+  z-index: 9999;
+  margin: 2rem;
+  top: 0;
+  left: 0;
+}
+.back a {
+  padding: 13px 35px;
+  text-decoration: none;
+  background: crimson;
+  color: #fff;
+  border-radius: 20px;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 0 8px 0px crimson;
+}
+.back a:hover {
+  opacity: 0.7;
+}
+.back a i {
+  position: relative;
+  top: 1px;
+  right: 10px;
+  font-size: 14px;
+}
+
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card {
+  position: absolute;
+  width: 240px;
+  height: 320px;
+  background: #333;
+  border-radius: 10;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.container .card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 0.5s;
+  filter: grayscale(1) contrast(2);
+}
+
+.container:hover .card {
+  transform: rotate(calc(var(--i) * 5deg))
+    translate(calc(var(--i) * 120px), -50px);
+}
+.container:hover .card img {
+  opacity: 0.5;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+.container .card:hover {
+  translate: calc((var(--i) * 20px), -50px);
+  z-index: 100;
+}
+
+.container .card:hover img {
+  opacity: 1;
+  filter: grayscale(0) contrast(1);
+}
+.container .card::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 40%;
+  width: 50px;
+  height: 10px;
+  background: #ff003b;
+  transition: 0.5s;
+  transform: scaleY(0);
+  transform-origin: top;
+  z-index: -1;
+}
+.container .card:hover::after {
+  transform: scaleY(50);
+}

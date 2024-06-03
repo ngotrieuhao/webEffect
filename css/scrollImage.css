@@ -1,0 +1,74 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+body {
+  height: 600vh;
+}
+
+.back {
+  position: fixed;
+  z-index: 9999;
+  margin: 2rem;
+  top: 0;
+  left: 0;
+}
+.back a {
+  padding: 13px 35px;
+  text-decoration: none;
+  background: crimson;
+  color: #fff;
+  border-radius: 20px;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 0 8px 0px crimson;
+}
+.back a:hover {
+  opacity: 0.7;
+}
+.back a i {
+  position: relative;
+  top: 1px;
+  right: 10px;
+  font-size: 14px;
+}
+
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transition: background-image 0.5s;
+}
