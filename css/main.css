@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", serif;
 }
 :root {
   --color-red: #ec1840;
@@ -72,7 +75,7 @@ h1 {
   text-align: center;
   color: #ddd;
   font-size: 5em;
-  font-family: sans-serif;
+  font-weight: 600;
   letter-spacing: 0.2em;
 }
 
@@ -143,6 +146,7 @@ h1 span:nth-child(8) {
   transition: var(--speed-normal);
   border: 1px solid var(--color-red);
   border-radius: 20px;
+  font-weight: 600;
 }
 
 .link-parallax a:hover {
